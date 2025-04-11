@@ -56,15 +56,15 @@
 }
 
 .answer-button.correct {
-    background-color: #28a745;
-    color: white;
-    border-color: #28a745;
+    background-color: #28a745 !important;
+    color: white !important;
+    border-color: #28a745 !important;
 }
 
 .answer-button.wrong {
-    background-color: #dc3545;
-    color: white;
-    border-color: #dc3545;
+    background-color: #dc3545 !important;
+    color: white !important;
+    border-color: #dc3545 !important;
 }
 
 .statistics {
@@ -159,10 +159,26 @@
         font-size: 1rem;
     }
 
+    .answer-button:hover {
+        background-color: white;
+    }
+
     .statistics {
         flex-direction: column;
         align-items: center;
         margin: 0.5rem;
         padding: 1rem;
+    }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+    .answer-button:hover {
+        background-color: white;
+        transform: none;
+    }
+    
+    .answer-button:active {
+        transform: none;
     }
 } 
