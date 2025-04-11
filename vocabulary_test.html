@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRC - Slovíčka</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .vocabulary-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .category-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .category-button {
+            background-color: #f8f9fa;
+            border: 2px solid #001f3f;
+            color: #001f3f;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-button.active {
+            background-color: #001f3f;
+            color: white;
+        }
+
+        .category-button:hover {
+            background-color: #001f3f;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .vocabulary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .vocabulary-item {
+            background-color: #f8f9fa;
+            border: 2px solid #001f3f;
+            border-radius: 8px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+
+        .vocabulary-item.visible {
+            display: block;
+        }
+
+        .vocabulary-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .czech-word {
+            color: #001f3f;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .english-word {
+            color: #001f3f;
+            font-size: 1.1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .vocabulary-item.show-translation .english-word {
+            opacity: 1;
+        }
+
+        .menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: #001f3f;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            margin: 2rem auto;
+            width: fit-content;
+            transition: all 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #003366;
+            transform: translateY(-2px);
+        }
+
+        .title {
+            color: #001f3f;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .vocabulary-container {
+                margin: 0.5rem;
+                padding: 1.5rem;
+            }
+
+            .vocabulary-list {
+                grid-template-columns: 1fr;
+            }
+
+            .czech-word {
+                font-size: 1.1rem;
+            }
+
+            .english-word {
+                font-size: 1rem;
+            }
+
+            .category-selector {
+                flex-direction: column;
+            }
+
+            .category-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="vocabulary-container">
+            <h1 class="title">Seznam slovíček</h1>
+            <div class="category-selector" id="categorySelector">
+                <button class="category-button active" data-category="all">Všechna slovíčka</button>
+                <button class="category-button" data-category="tisen">Tíseň</button>
+                <button class="category-button" data-category="meteorologie">Meteorologie</button>
+                <button class="category-button" data-category="lod">Loď</button>
+                <button class="category-button" data-category="zkouska">Slovíčka ke zkoušce</button>
+                <button class="category-button" data-category="casy">Časy</button>
+                <button class="category-button" data-category="radiokomunikace">Radiokomunikace</button>
+                <button class="category-button" data-category="douglas">Douglas scale</button>
+            </div>
+            <ul class="vocabulary-list" id="vocabularyList">
+                <!-- Seznam slovíček bude vygenerován pomocí JavaScriptu -->
+            </ul>
+        </div>
+
+        <a href="index.html" class="menu-button">
+            <i class="fas fa-home"></i>
+            Zpět do menu
+        </a>
+    </main>
+
+    <script>
+        const vocabulary = {
+            tisen: [
+                { czech: "oheň, výbuch", english: "Fire, explosion" },
+                { czech: "Loď se zaplavuje", english: "Flooding" },
+                { czech: "kolize", english: "Collision" },
+                { czech: "nasednutí", english: "Grounding / Aground" },
+                { czech: "potápění se", english: "Sinking" },
+                { czech: "převrácený", english: "Capsize" },
+                { czech: "splouvající", english: "Adrift" },
+                { czech: "muž přes palubu", english: "Man overboard" },
+                { czech: "nevědomí", english: "Unconscious" }
+            ],
+            meteorologie: [
+                { czech: "uzly", english: "Knots" },
+                { czech: "vichřice", english: "Gale" },
+                { czech: "poryvy", english: "Gusts" },
+                { czech: "klesá", english: "Decreasing" },
+                { czech: "narůstá", english: "Increasing" },
+                { czech: "tlak", english: "Pressure" },
+                { czech: "předpověď počasí", english: "Weather forecast" },
+                { czech: "mlha", english: "Fog" }
+            ],
+            lod: [
+                { czech: "pravobok", english: "Starboard" },
+                { czech: "levobok", english: "Port" },
+                { czech: "příď", english: "Bow" },
+                { czech: "záď", english: "Stern" },
+                { czech: "paluba", english: "Deck" },
+                { czech: "stěžeň", english: "Mast" },
+                { czech: "trup", english: "Hull" },
+                { czech: "plachty", english: "Sails" },
+                { czech: "lodní šroub", english: "Propeller" },
+                { czech: "motor", english: "Engine" },
+                { czech: "kormidlo", english: "Rudder" },
+                { czech: "ráhno", english: "Boom" },
+                { czech: "plavidlo", english: "Vessel" },
+                { czech: "člun", english: "Boat" },
+                { czech: "loď", english: "Ship" }
+            ],
+            zkouska: [
+                { czech: "poplach", english: "Alert" },
+                { czech: "záchranný ostrůvek", english: "Liferaft" },
+                { czech: "vesta", english: "Lifejacket" },
+                { czech: "únik (kapalin)", english: "Leak" },
+                { czech: "ihned", english: "Immediately" },
+                { czech: "provoz", english: "Traffic" },
+                { czech: "hlášeno", english: "Reported" },
+                { czech: "opuštěné plavidlo", english: "Abandoned vessel" },
+                { czech: "neovladatelné plavidlo", english: "Vessel not under command" },
+                { czech: "v okolí", english: "In vicinity" },
+                { czech: "zraněný", english: "Injured" },
+                { czech: "kurz", english: "Course" },
+                { czech: "snášení (větrem)", english: "Drifting" },
+                { czech: "pomoc", english: "Assistance" },
+                { czech: "pobřežní stráž", english: "Coastguard" },
+                { czech: "záchrana", english: "Rescue" },
+                { czech: "varování", english: "Warning" },
+                { czech: "zakázáno", english: "Prohibited" },
+                { czech: "pokračovat", english: "Proceed" },
+                { czech: "po směru hodinových ručiček", english: "Reverse" },
+                { czech: "proti směru hodinových ručiček", english: "Turning" },
+                { czech: "vyhlížení", english: "Lookout" },
+                { czech: "tažení", english: "Towing" },
+                { czech: "bóje", english: "Buoy" },
+                { czech: "maják", english: "Lighthouse" },
+                { czech: "malé plavidla", english: "Small crafts" },
+                { czech: "bagrování", english: "Dredging" },
+                { czech: "dodržovat", english: "Comply with" },
+                { czech: "spatřený", english: "Sighted" },
+                { czech: "spadnout", english: "Fall" },
+                { czech: "pokažený motor", english: "Broken engine" },
+                { czech: "lékařská rada", english: "Medical advice" },
+                { czech: "veškerý vnitřní objem trupu plavidla + nástavby nad palubou", english: "GT = gross tonnage" },
+                { czech: "místo v přístavu", english: "Berth" }
+            ],
+            casy: [
+                { czech: "koordinovaný světový čas", english: "UTC" },
+                { czech: "lokální čas", english: "Local time" },
+                { czech: "očekávaný čas příjezdu", english: "ETA" }
+            ],
+            radiokomunikace: [
+                { czech: "pracovní kanál", english: "Working channel" },
+                { czech: "Radiotelefonní tísňové volání", english: "Radiotelefonní emergency call" },
+                { czech: "Námořní pohyblivá služba", english: "Marine mobile service" }
+            ],
+            douglas: [
+                { czech: "Klidné (zčeřené)", english: "1. Calm (rippled)" },
+                { czech: "Hladké", english: "2. Smooth" },
+                { czech: "Mírné", english: "3. Slight" },
+                { czech: "Střední", english: "4. Moderate" },
+                { czech: "Drsné", english: "5. Rough" },
+                { czech: "Velmi drsné", english: "6. Very rough" },
+                { czech: "Vysoké", english: "7. High" },
+                { czech: "Velmi vysoké", english: "8. Very high" },
+                { czech: "Fenomenální", english: "9. Phenomenal" }
+            ]
+        };
+
+        function createVocabularyList() {
+            const list = document.getElementById('vocabularyList');
+            
+            // Clear existing items
+            list.innerHTML = '';
+            
+            // Create items for each category
+            Object.entries(vocabulary).forEach(([category, words]) => {
+                words.forEach(word => {
+                    const li = document.createElement('li');
+                    li.className = `vocabulary-item ${category}`;
+                    li.innerHTML = `
+                        <div class="czech-word">${word.czech}</div>
+                        <div class="english-word">${word.english}</div>
+                    `;
+                    
+                    li.addEventListener('click', () => {
+                        li.classList.toggle('show-translation');
+                    });
+                    
+                    list.appendChild(li);
+                });
+            });
+
+            // Show all items initially
+            showCategory('all');
+        }
+
+        function showCategory(category) {
+            const items = document.querySelectorAll('.vocabulary-item');
+            const buttons = document.querySelectorAll('.category-button');
+
+            // Update buttons
+            buttons.forEach(button => {
+                if (button.dataset.category === category) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            // Show/hide items
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.add('visible');
+                } else {
+                    item.classList.remove('visible');
+                }
+            });
+        }
+
+        // Add event listeners to category buttons
+        document.querySelectorAll('.category-button').forEach(button => {
+            button.addEventListener('click', () => {
+                showCategory(button.dataset.category);
+            });
+        });
+
+        // Initialize vocabulary list
+        createVocabularyList();
+    </script>
+</body>
+</html> 
