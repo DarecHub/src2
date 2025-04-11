@@ -1,0 +1,273 @@
+/* Reset a základní styly */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5;
+}
+
+/* Header a navigace */
+header {
+    background-color: #001f3f;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo i {
+    color: #00f2ff;
+    font-size: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #00f2ff;
+}
+
+/* Test sekce */
+main {
+    padding-top: 80px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.test-section {
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.container {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.main-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #001f3f;
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.main-button i {
+    font-size: 1.5rem;
+    color: #00f2ff;
+}
+
+.main-button:hover {
+    background-color: #003366;
+    transform: translateX(10px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #001f3f;
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Mobilní menu */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Reklamní sekce */
+.ad-section {
+    background-color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ad-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.ad-placeholder {
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 120px;
+}
+
+.ad-placeholder i {
+    font-size: 2rem;
+}
+
+.ad-placeholder span {
+    font-size: 1.1rem;
+}
+
+/* Responzivní design */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        font-size: 0.9rem;
+    }
+    
+    .nav-links li {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        height: calc(100vh - 60px);
+        width: 100%;
+        background-color: #001f3f;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        transition: right 0.5s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .test-section {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .button-container {
+        padding: 0.5rem;
+    }
+
+    .main-button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .main-button i {
+        font-size: 1.2rem;
+    }
+
+    .ad-section {
+        margin-top: 0.5rem;
+    }
+
+    .ad-placeholder {
+        padding: 1rem;
+        min-height: 90px;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .ad-placeholder span {
+        font-size: 1rem;
+    }
+}
+
+/* Animace pro mobilní menu */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 

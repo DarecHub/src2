@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRC - Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="test-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>SRC</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="test-page">
+        <div class="question-container">
+            <div class="question-number">Otázka <span id="currentQuestion">1</span></div>
+            <div class="question-text" id="questionText">
+                <!-- Otázka bude vložena pomocí JavaScriptu -->
+            </div>
+            
+            <div class="answers">
+                <button class="answer-button" id="answer1">
+                    <!-- Odpověď 1 bude vložena pomocí JavaScriptu -->
+                </button>
+                <button class="answer-button" id="answer2">
+                    <!-- Odpověď 2 bude vložena pomocí JavaScriptu -->
+                </button>
+                <button class="answer-button" id="answer3">
+                    <!-- Odpověď 3 bude vložena pomocí JavaScriptu -->
+                </button>
+            </div>
+        </div>
+
+        <div class="statistics">
+            <div class="stat-item">
+                <i class="fas fa-check"></i>
+                <span>Správně: </span>
+                <span id="correctAnswers">0</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-times"></i>
+                <span>Špatně: </span>
+                <span id="wrongAnswers">0</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-percentage"></i>
+                <span>Úspěšnost: </span>
+                <span id="successRate">0%</span>
+            </div>
+        </div>
+
+        <a href="index.html" class="menu-button">
+            <i class="fas fa-home"></i>
+            Zpět do menu
+        </a>
+    </main>
+
+    <script src="test.js"></script>
+</body>
+</html> 

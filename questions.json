@@ -1,0 +1,44 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "Jaká je maximální povolená výstupní výkon pro radioamatérskou stanici třídy N?",
+            "answer1": "10 W",
+            "answer2": "25 W",
+            "answer3": "50 W",
+            "correct_answer": 0
+        },
+        {
+            "id": 2,
+            "question": "Co znamená zkratka CQ?",
+            "answer1": "Všeobecná výzva",
+            "answer2": "Konec vysílání",
+            "answer3": "Potvrzení příjmu",
+            "correct_answer": 0
+        },
+        {
+            "id": 3,
+            "question": "Jaký je mezinárodní tísňový kmitočet v pásmu VKV?",
+            "answer1": "145.500 MHz",
+            "answer2": "156.800 MHz",
+            "answer3": "121.500 MHz",
+            "correct_answer": 1
+        },
+        {
+            "id": 4,
+            "question": "Co znamená Q-kód QTH?",
+            "answer1": "Jaké je počasí?",
+            "answer2": "Jaká je vaše poloha?",
+            "answer3": "Jaký je čas?",
+            "correct_answer": 1
+        },
+        {
+            "id": 5,
+            "question": "Jaká je hodnota napětí v běžné elektrické síti v ČR?",
+            "answer1": "110V",
+            "answer2": "220V",
+            "answer3": "230V",
+            "correct_answer": 2
+        }
+    ]
+} 
