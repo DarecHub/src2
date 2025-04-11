@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRC - Slovíčka</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .vocabulary-container {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .vocabulary-section {
+      margin-bottom: 2rem;
+    }
+
+    .vocabulary-section h2 {
+      color: #001f3f;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #001f3f;
+    }
+
+    .vocabulary-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .vocabulary-item {
+      padding: 0.5rem 0;
+      margin-bottom: 0.3rem;
+      border-bottom: 1px solid #f0f2f5;
+    }
+
+    .vocabulary-item strong {
+      color: #001f3f;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    .menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: #001f3f;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      margin: 2rem auto;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .menu-button:hover {
+      background-color: #003366;
+      transform: translateY(-2px);
+    }
+
+    @media screen and (max-width: 768px) {
+      .vocabulary-container {
+        margin: 0.5rem;
+        padding: 1.5rem;
+      }
+
+      .vocabulary-section h2 {
+        font-size: 1.2rem;
+      }
+
+      .vocabulary-item {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="vocabulary-container">
+      <div class="vocabulary-section">
+        <h2>Tíseň</h2>
+        <ul class="vocabulary-list">
+          <li class="vocabulary-item"><strong>Fire, explosion</strong> – oheň, výbuch</li>
+          <li class="vocabulary-item"><strong>Flooding</strong> – Loď se zaplavuje</li>
+          <li class="vocabulary-item"><strong>Collision</strong> – kolize</li>
+          <li class="vocabulary-item"><strong>Grounding / Aground</strong> – nasednutí</li>
+          <li class="vocabulary-item"><strong>Sinking</strong> – potápění se</li>
+          <li class="vocabulary-item"><strong>Capsize</strong> – převrácený</li>
+          <li class="vocabulary-item"><strong>Adrift</strong> – splouvající</li>
+          <li class="vocabulary-item"><strong>Man overboard</strong> – muž přes palubu</li>
+          <li class="vocabulary-item"><strong>Unconscious</strong> – nevědomí</li>
+        </ul>
+      </div>
+
+      <div class="vocabulary-section">
+        <h2>Meteorologie</h2>
+        <ul class="vocabulary-list">
+          <li class="vocabulary-item"><strong>Knots</strong> – uzly</li>
+          <li class="vocabulary-item"><strong>Gale</strong> – vichřice</li>
+          <li class="vocabulary-item"><strong>Gusts</strong> – poryvy</li>
+          <li class="vocabulary-item"><strong>Decreasing</strong> – klesá</li>
+          <li class="vocabulary-item"><strong>Increasing</strong> – narůstá</li>
+          <li class="vocabulary-item"><strong>Pressure</strong> – tlak</li>
+          <li class="vocabulary-item"><strong>Weather forecast</strong> – předpověď počasí</li>
+          <li class="vocabulary-item"><strong>Fog</strong> – mlha</li>
+        </ul>
+      </div>
+
+      <div class="vocabulary-section">
+        <h2>Loď</h2>
+        <ul class="vocabulary-list">
+          <li class="vocabulary-item"><strong>Starboard</strong> – pravobok</li>
+          <li class="vocabulary-item"><strong>Port</strong> – levobok</li>
+          <li class="vocabulary-item"><strong>Bow</strong> – příď</li>
+          <li class="vocabulary-item"><strong>Stern</strong> – záď</li>
+          <li class="vocabulary-item"><strong>Deck</strong> – paluba</li>
+          <li class="vocabulary-item"><strong>Mast</strong> – stěžeň</li>
+          <li class="vocabulary-item"><strong>Hull</strong> – trup</li>
+          <li class="vocabulary-item"><strong>Sails</strong> – plachty</li>
+          <li class="vocabulary-item"><strong>Propeller</strong> – lodní šroub</li>
+          <li class="vocabulary-item"><strong>Engine</strong> – motor</li>
+          <li class="vocabulary-item"><strong>Rudder</strong> – kormidlo</li>
+          <li class="vocabulary-item"><strong>Boom</strong> – ráhno</li>
+          <li class="vocabulary-item"><strong>Vessel</strong> – plavidlo</li>
+          <li class="vocabulary-item"><strong>Boat</strong> – člun</li>
+          <li class="vocabulary-item"><strong>Ship</strong> – loď</li>
+        </ul>
+      </div>
+
+      <div class="vocabulary-section">
+        <h2>Slovíčka ke zkoušce</h2>
+        <ul class="vocabulary-list">
+          <li class="vocabulary-item"><strong>Alert</strong> – poplach</li>
+          <li class="vocabulary-item"><strong>Liferaft</strong> – záchranný ostrůvek</li>
+          <li class="vocabulary-item"><strong>Lifejacket</strong> – vesta</li>
+          <li class="vocabulary-item"><strong>Leak</strong> – únik (kapalin)</li>
+          <li class="vocabulary-item"><strong>Immediately</strong> – ihned</li>
+          <li class="vocabulary-item"><strong>Traffic</strong> – provoz</li>
+          <li class="vocabulary-item"><strong>Reported</strong> – hlášeno</li>
+          <li class="vocabulary-item"><strong>Abandoned vessel</strong> – opuštěné plavidlo</li>
+          <li class="vocabulary-item"><strong>Vessel not under command</strong> – neovladatelné plavidlo</li>
+          <li class="vocabulary-item"><strong>In vicinity</strong> – v okolí</li>
+          <li class="vocabulary-item"><strong>Injured</strong> – zraněný</li>
+          <li class="vocabulary-item"><strong>Course</strong> – kurz</li>
+          <li class="vocabulary-item"><strong>Drifting</strong> – snášení (větrem)</li>
+          <li class="vocabulary-item"><strong>Assistance</strong> – pomoc</li>
+          <li class="vocabulary-item"><strong>Coastguard</strong> – pobřežní stráž</li>
+          <li class="vocabulary-item"><strong>Rescue</strong> – záchrana</li>
+          <li class="vocabulary-item"><strong>Warning</strong> – varování</li>
+          <li class="vocabulary-item"><strong>Prohibited</strong> – zakázáno</li>
+          <li class="vocabulary-item"><strong>Proceed</strong> – pokračovat</li>
+          <li class="vocabulary-item"><strong>Reverse</strong> – po směru hodinových ručiček</li>
+          <li class="vocabulary-item"><strong>Turning</strong> – proti směru hodinových ručiček</li>
+          <li class="vocabulary-item"><strong>Lookout</strong> – vyhlížení</li>
+          <li class="vocabulary-item"><strong>Towing</strong> – tažení</li>
+          <li class="vocabulary-item"><strong>Buoy</strong> – bóje</li>
+          <li class="vocabulary-item"><strong>Lighthouse</strong> – maják</li>
+          <li class="vocabulary-item"><strong>Small crafts</strong> – malé plavidla</li>
+          <li class="vocabulary-item"><strong>Dredging</strong> – bagrování</li>
+          <li class="vocabulary-item"><strong>Comply with</strong> – dodržovat</li>
+          <li class="vocabulary-item"><strong>Sighted</strong> – spatřený</li>
+          <li class="vocabulary-item"><strong>Fall</strong> – spadnout</li>
+          <li class="vocabulary-item"><strong>Broken engine</strong> – pokažený motor</li>
+          <li class="vocabulary-item"><strong>Medical advice</strong> – lékařská rada</li>
+          <li class="vocabulary-item"><strong>GT = gross tonnage</strong> – veškerý vnitřní objem trupu plavidla + nástavby nad palubou</li>
+          <li class="vocabulary-item"><strong>Berth</strong> – místo v přístavu</li>
+        </ul>
+      </div>
+
+      <div class="vocabulary-section">
+        <h2>Časy</h2>
+        <ul class="vocabulary-list">
+          <li class="vocabulary-item"><strong>UTC</strong> – koordinovaný světový čas</li>
+          <li class="vocabulary-item"><strong>Local time</strong> – lokální čas</li>
+          <li class="vocabulary-item"><strong>ETA</strong> – očekávaný čas příjezdu</li>
+        </ul>
+      </div>
+
+      <div class="vocabulary-section">
+        <h2>Radiokomunikace</h2>
+        <ul class="vocabulary-list">
+          <li class="vocabulary-item"><strong>Working channel</strong> – pracovní kanál</li>
+          <li class="vocabulary-item"><strong>Radiotelefonní tísňové volání</strong> – Radiotelefonní emergency call</li>
+          <li class="vocabulary-item"><strong>Námořní pohyblivá služba</strong> – Marine mobile service</li>
+        </ul>
+      </div>
+
+      <div class="vocabulary-section">
+        <h2>Douglas scale - značí stav moře</h2>
+        <ul class="vocabulary-list">
+          <li class="vocabulary-item">1. Calm (rippled)</li>
+          <li class="vocabulary-item">2. Smooth</li>
+          <li class="vocabulary-item">3. Slight</li>
+          <li class="vocabulary-item">4. Moderate</li>
+          <li class="vocabulary-item">5. Rough</li>
+          <li class="vocabulary-item">6. Very rough</li>
+          <li class="vocabulary-item">7. High</li>
+          <li class="vocabulary-item">8. Very high</li>
+          <li class="vocabulary-item">9. Phenomenal</li>
+        </ul>
+      </div>
+    </div>
+
+    <a href="index.html" class="menu-button">
+      <i class="fas fa-home"></i>
+      Zpět do menu
+    </a>
+  </main>
+</body>
+</html>
