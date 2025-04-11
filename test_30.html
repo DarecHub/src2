@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRC - Test 30 otázek</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="test-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>SRC</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="test-page">
+        <div class="question-container">
+            <div class="progress-info">
+                <div class="question-number">Otázka <span id="currentQuestion">1</span>/30</div>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="question-text" id="questionText">
+                <!-- Otázka bude vložena pomocí JavaScriptu -->
+            </div>
+            
+            <div class="answers">
+                <button class="answer-button" id="answer1">
+                    <!-- Odpověď 1 bude vložena pomocí JavaScriptu -->
+                </button>
+                <button class="answer-button" id="answer2">
+                    <!-- Odpověď 2 bude vložena pomocí JavaScriptu -->
+                </button>
+                <button class="answer-button" id="answer3">
+                    <!-- Odpověď 3 bude vložena pomocí JavaScriptu -->
+                </button>
+            </div>
+        </div>
+
+        <div class="statistics">
+            <div class="stat-item">
+                <i class="fas fa-check"></i>
+                <span>Správně: </span>
+                <span id="correctAnswers">0</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-times"></i>
+                <span>Špatně: </span>
+                <span id="wrongAnswers">0</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-percentage"></i>
+                <span>Úspěšnost: </span>
+                <span id="successRate">0%</span>
+            </div>
+        </div>
+
+        <a href="index.html" class="menu-button">
+            <i class="fas fa-home"></i>
+            Zpět do menu
+        </a>
+    </main>
+
+    <script src="test.js"></script>
+    <script>
+        // Přepsání inicializační funkce pro 30 otázek
+        function initTest() {
+            // Náhodný výběr 30 otázek z celé databáze
+            questions = questionsData.questions
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 30);
+            
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            wrongAnswers = 0;
+            
+            showQuestion(currentQuestionIndex);
+            updateStatistics();
+            updateProgress();
+        }
+
+        // Funkce pro aktualizaci progress baru
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / 30) * 100;
+            document.getElementById('progressFill').style.width = `${progress}%`;
+        }
+
+        // Přepsání funkce pro kontrolu odpovědi
+        const originalCheckAnswer = window.checkAnswer;
+        window.checkAnswer = function(answerIndex) {
+            const question = questions[currentQuestionIndex];
+            const isCorrect = answerIndex === question.correct_answer;
+            
+            // Vizuální zpětná vazba
+            answerButtons[answerIndex].classList.add(isCorrect ? 'correct' : 'wrong');
+            
+            // Aktualizace statistik
+            if (isCorrect) {
+                correctAnswers++;
+            } else {
+                wrongAnswers++;
+                answerButtons[question.correct_answer].classList.add('correct');
+            }
+            
+            updateStatistics();
+            
+            // Deaktivace tlačítek
+            answerButtons.forEach(button => {
+                button.onclick = null;
+            });
+            
+            // Přechod na další otázku po 2 sekundách
+            setTimeout(() => {
+                if (currentQuestionIndex < 29) {
+                    currentQuestionIndex++;
+                    showQuestion(currentQuestionIndex);
+                    updateProgress();
+                } else {
+                    // Konec testu
+                    questionTextElement.textContent = "Test dokončen!";
+                    answerButtons.forEach(button => {
+                        button.style.display = 'none';
+                    });
+                }
+            }, 2000);
+        }
+
+        // Spuštění testu při načtení stránky
+        initTest();
+    </script>
+</body>
+</html>

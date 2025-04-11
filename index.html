@@ -8,34 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <i class="fas fa-broadcast-tower"></i>
-                <span>SRC</span>
-            </div>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="ad-section">
-        <div class="ad-container">
-            <div class="ad-placeholder">
-                <i class="fas fa-ad"></i>
-                <span>Prostor pro reklamu</span>
-            </div>
-        </div>
-    </div>
-
     <main>
         <div class="button-container">
-            <a href="test.html" class="main-button">
+            <a href="test.html?category=all" class="main-button">
                 <i class="fas fa-clipboard-list"></i>
                 Kompletní test
+            </a>
+            <a href="test_30.html" class="main-button">
+                <i class="fas fa-list-ol"></i>
+                Test na 30 otázek
             </a>
             <a href="vocabulary.html" class="main-button">
                 <i class="fas fa-book"></i>
@@ -45,21 +26,22 @@
                 <i class="fas fa-question-circle"></i>
                 Otázky
             </a>
-            <a href="regulations.html" class="main-button">
+            <a href="test.html?category=regulations" class="main-button">
                 <i class="fas fa-gavel"></i>
                 Test radiokomunikační předpisy
             </a>
-            <a href="operations.html" class="main-button">
+            <a href="test.html?category=operations" class="main-button">
                 <i class="fas fa-broadcast-tower"></i>
                 Test radiokomunikační provoz
             </a>
-            <a href="technical.html" class="main-button">
+            <a href="test.html?category=technical" class="main-button">
                 <i class="fas fa-microchip"></i>
                 Test elektrotechnika a radiotechnika
             </a>
         </div>
     </main>
 
+    <!--
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -70,6 +52,33 @@
             <p>&copy; 2024 SRC</p>
         </div>
     </footer>
+    -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>SRC</span>
+            </div>
+            <!--<div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            -->
+        </nav>
+    </header>
+
+    <!--
+    <div class="ad-section">
+        <div class="ad-container">
+            <div class="ad-placeholder">
+                <i class="fas fa-ad"></i>
+                <span>Prostor pro reklamu</span>
+            </div>
+        </div>
+    </div>
+    -->
 
     <script src="script.js"></script>
 </body>

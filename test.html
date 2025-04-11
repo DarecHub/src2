@@ -63,5 +63,13 @@
     </main>
 
     <script src="test.js"></script>
+    <script>
+        // Získání kategorie z URL parametru
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category') || 'all';
+        
+        // Inicializace testu s vybranou kategorií
+        initTest(category);
+    </script>
 </body>
 </html> 
