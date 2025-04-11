@@ -62,10 +62,6 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            display: none;
-        }
-
-        .vocabulary-item.visible {
             display: block;
         }
 
@@ -185,28 +181,7 @@
     </main>
 
     <script>
-        // Mobile menu functionality
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav-links');
-        const navLinks = document.querySelectorAll('.nav-links li');
-
-        burger.addEventListener('click', () => {
-            // Toggle nav
-            nav.classList.toggle('active');
-            
-            // Animate links
-            navLinks.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                }
-            });
-            
-            // Burger animation
-            burger.classList.toggle('toggle');
-        });
-
+        // Odstranění mobilního menu funkcionality
         const vocabulary = {
             tisen: [
                 { czech: "oheň, výbuch", english: "Fire, explosion" },
@@ -305,66 +280,54 @@
             ]
         };
 
-        function createVocabularyList() {
-            const list = document.getElementById('vocabularyList');
+        function displayVocabulary(category) {
+            const vocabularyList = document.getElementById('vocabularyList');
+            vocabularyList.innerHTML = '';
             
-            // Clear existing items
-            list.innerHTML = '';
-            
-            // Create items for each category
-            Object.entries(vocabulary).forEach(([category, words]) => {
-                words.forEach(word => {
-                    const li = document.createElement('li');
-                    li.className = `vocabulary-item ${category}`;
-                    li.innerHTML = `
-                        <div class="czech-word">${word.czech}</div>
-                        <div class="english-word">${word.english}</div>
-                    `;
-                    
-                    li.addEventListener('click', () => {
-                        li.classList.toggle('show-translation');
-                    });
-                    
-                    list.appendChild(li);
+            let words = [];
+            if (category === 'all') {
+                // Zkombinuj všechna slovíčka
+                Object.values(vocabulary).forEach(categoryWords => {
+                    words = words.concat(categoryWords);
                 });
-            });
-
-            // Show all items initially
-            showCategory('all');
-        }
-
-        function showCategory(category) {
-            const items = document.querySelectorAll('.vocabulary-item');
-            const buttons = document.querySelectorAll('.category-button');
-
-            // Update buttons
-            buttons.forEach(button => {
-                if (button.dataset.category === category) {
-                    button.classList.add('active');
-                } else {
-                    button.classList.remove('active');
-                }
-            });
-
-            // Show/hide items
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.classList.add('visible');
-                } else {
-                    item.classList.remove('visible');
-                }
+            } else {
+                words = vocabulary[category] || [];
+            }
+            
+            words.forEach(word => {
+                const li = document.createElement('li');
+                li.className = 'vocabulary-item';
+                li.innerHTML = `
+                    <div class="czech-word">${word.czech}</div>
+                    <div class="english-word">${word.english}</div>
+                `;
+                
+                li.addEventListener('click', () => {
+                    li.classList.toggle('show-translation');
+                });
+                
+                vocabularyList.appendChild(li);
             });
         }
 
-        // Add event listeners to category buttons
+        // Inicializace
+        displayVocabulary('all');
+
+        // Přidání event listenerů pro tlačítka kategorií
         document.querySelectorAll('.category-button').forEach(button => {
             button.addEventListener('click', () => {
-                showCategory(button.dataset.category);
+                // Odstranění active třídy ze všech tlačítek
+                document.querySelectorAll('.category-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Přidání active třídy na kliknuté tlačítko
+                button.classList.add('active');
+                
+                // Zobrazení slovíček pro vybranou kategorii
+                displayVocabulary(button.dataset.category);
             });
         });
-
-        // Initialize vocabulary list
-        createVocabularyList();
     </script>
 </body>
 </html> 
