@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRC - Otázky</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .questions-container {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .questions-section {
+      margin-bottom: 2rem;
+    }
+
+    .questions-section h2 {
+      color: #001f3f;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #001f3f;
+    }
+
+    .question {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #001f3f;
+    }
+
+    .answer {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      font-style: italic;
+    }
+
+    .menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: #001f3f;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      margin: 2rem auto;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .menu-button:hover {
+      background-color: #003366;
+      transform: translateY(-2px);
+    }
+
+    @media screen and (max-width: 768px) {
+      .questions-container {
+        margin: 0.5rem;
+        padding: 1.5rem;
+      }
+
+      .questions-section h2 {
+        font-size: 1.2rem;
+      }
+
+      .question {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <i class="fas fa-broadcast-tower"></i>
+        <span>SRC</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Zpět do menu</a></li>
+      </ul>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="questions-container">
+      <h1>Otázky pro Omezený průkaz operátora námořní pohyblivé služby (SRC)</h1>
+
+      <div class="questions-section">
+        <h2>a) Radiokomunikační předpisy</h2>
+        <div class="question">
+          Zajištění účelného využívání rádiových kmitočtů a správu rádiového spektra vykonává
+          <div class="answer">- Český telekomunikační úřad</div>
+        </div>
+        <div class="question">
+          Radiokomunikační službou je komunikační činnost, která spočívá v přenosu, vysílání nebo příjmu signálů prostřednictvím
+          <div class="answer">- rádiových vln</div>
+        </div>
+        <div class="question">
+          Plán přidělení kmitočtových pásem (národní kmitočtovou tabulku) stanoví
+          <div class="answer">- Ministerstvo průmyslu a obchodu vyhláškou</div>
+        </div>
+        <div class="question">
+          Individuální oprávnění k vyžívání rádiových kmitočtů uděluje
+          <div class="answer">- Český telekomunikační úřad</div>
+        </div>
+        <div class="question">
+          Držitel individuálního oprávnění k využívání rádiových kmitočtů je povinen platit za využívání rádiových kmitočtů
+          <div class="answer">- poplatek dle nařízení vlády o poplatcích</div>
+        </div>
+        <div class="question">
+          Rádiovým spektrem se rozumí elektromagnetické vlny o kmitočtu (frekvenci)
+          <div class="answer">- nižším než 30 GHz</div>
+        </div>
+        <div class="question">
+          Státní kontrolu elektronických komunikací vykonává
+          <div class="answer">- Český telekomunikační úřad</div>
+        </div>
+        <div class="question">
+          Fyzická osoba vykonávající obsluhu vysílacího rádiového zařízení bez platného průkazu odborné způsobilosti se dopustila
+          <div class="answer">- přestupku</div>
+        </div>
+        <div class="question">
+          Za obsluhu vysílacího rádiového zařízení bez platného průkazu odborné způsobilosti může Úřad uložit fyzické osobě pokutu až do výše
+          <div class="answer">- 100 000 Kč</div>
+        </div>
+        <div class="question">
+          V mezinárodní volací značce České republiky tvoří první dvě písmena (prefix) vždy dvojice písmen
+          <div class="answer">- OK nebo OL</div>
+        </div>
+        <div class="question">
+          Mezinárodní volací značka lodní stanice u plavidel zapsaných v námořním rejstříku ČR je
+          <div class="answer">- OL a další dvě písmena (případně OL a čtyři číslice u jachet)</div>
+        </div>
+        <div class="question">
+          Volací značka OL5234 v radiotelefonním provozu je
+          <div class="answer">- volací značka lodní stanice</div>
+        </div>
+        <div class="question">
+          Co znamená zkratka GMDSS?
+          <div class="answer">- celosvětový námořní tísňový a bezpečnostní systém</div>
+        </div>
+        <div class="question">
+          Je podle mezinárodního práva plavidlo povinné poskytnout pomoc jinému plavidlu v tísni?
+          <div class="answer">- ano, pokud tím nadměrně neohrozí svou loď nebo posádku</div>
+        </div>
+        <div class="question">
+          Falešné volací značky a falešné signály
+          <div class="answer">- se nesmí používat</div>
+        </div>
+        <div class="question">
+          Pohyblivá stanice námořní pohyblivé služby je
+          <div class="answer">- lodní stanice</div>
+        </div>
+        <div class="question">
+          Pohyblivá služba mezi pobřežními stanicemi a lodními stanicemi nebo mezi lodními stanicemi se nazývá
+          <div class="answer">- námořní pohyblivá služba</div>
+        </div>
+        <div class="question">
+          Pořadí zpráv podle důležitosti je následující:
+          <div class="answer">- tísňová zpráva (DISTRESS), pilnostní zpráva (URGENCY), bezpečnostní zpráva (SAFETY)</div>
+        </div>
+        <div class="question">
+          Nejvyšší prioritu a absolutní přednost má zpráva
+          <div class="answer">- tísňová (signál MAYDAY)</div>
+        </div>
+        <div class="question">
+          Tísňové volání a tísňová zpráva se vysílají jen na rozkaz
+          <div class="answer">- velitele nebo osoby odpovědné za loď nebo letadlo</div>
+        </div>
+        <div class="question">
+          Mezinárodní VKV (VHF) tísňový, bezpečnostní a volací kmitočet v radiotelefonii v námořní pohyblivé službě je
+          <div class="answer">- 156,8 MHz (kanál 16)</div>
+        </div>
+        <div class="question">
+          Kanál 16 v pásmu VKV (VHF) je v námořní pohyblivé službě určen k
+          <div class="answer">- tísňovému a pilnostnímu volání, upozornění na bezpečnostní volání a k navázání spojení s následným přeladěním na pracovní kanál.</div>
+        </div>
+        <div class="question">
+          Rádiové kmitočty z pásma 160 MHz spadají do pásma označovaného jako
+          <div class="answer">- VKV (VHF)</div>
+        </div>
+        <div class="question">
+          Pátrací a záchrannou operaci na moři může ukončit
+          <div class="answer">- velitel (řídící stanice) pátrací a záchranné operace</div>
+        </div>
+        <div class="question">
+          Pohyblivým stanicím na moři nebo nad mořem je zakázáno provozovat
+          <div class="answer">- rozhlasovou službu</div>
+        </div>
+        <div class="question">
+          Služba u letadlové nebo lodní stanice podléhá nejvyšší pravomoci
+          <div class="answer">- velitele nebo osoby, která je odpovědná za letadlo nebo plavidlo</div>
+        </div>
+        <div class="question">
+          Doba platnosti průkazů operátorů námořní pohyblivé služby LRC a SRC je při prvním vydání stanovena na
+          <div class="answer">- 10 let</div>
+        </div>
+        <div class="question">
+          O prodloužení doby platnosti průkazu odborné způsobilosti se žádá
+          <div class="answer">- písemně, minimálně jeden měsíc před koncem platnosti průkazu</div>
+        </div>
+        <div class="question">
+          Při žádosti o prodloužení platnosti průkazu je třeba také
+          <div class="answer">- uhradit příslušný správní poplatek a doložit praxi v obsluze rádiových stanic</div>
+        </div>
+        <div class="question">
+          V případě, že doba platnosti průkazu již uplynula, může držitel průkazu žádat o nový průkaz
+          <div class="answer">- v období do jednoho roku ode dne pozbytí platnosti průkazu</div>
+        </div>
+        <div class="question">
+          Doba platnosti průkazů operátorů námořní pohyblivé služby se na základě žádosti držitele prodlužuje o
+          <div class="answer">- 5 let</div>
+        </div>
+        <div class="question">
+          První znak nebo první dva znaky mezinárodní volací značky označují
+          <div class="answer">- státní příslušnost stanice</div>
+        </div>
+        <div class="question">
+          Stejná volací značka
+          <div class="answer">- nemůže být přidělena dvěma nebo více provozovatelům stanic</div>
+        </div>
+        <div class="question">
+          Inspekční orgány zemí, které pohyblivá stanice (letadlo, plavidlo) navštíví
+          <div class="answer">- mohou vyžadovat předložení průkazu operátora</div>
+        </div>
+        <div class="question">
+          Mezinárodní telekomunikační unie (ITU) je
+          <div class="answer">- specializovanou organizací Organizace spojených národů pro oblast telekomunikací</div>
+        </div>
+        <div class="question">
+          Volací značkou je
+          <div class="answer">- každé poznávací označení stanice přidělené dle Radiokomunikačního řádu, které umožňuje zjištění její totožnosti během vysílání</div>
+        </div>
+        <div class="question">
+          Mezi členy Regionální úmluvy o radiotelefonní službě na vnitrozemských vodních cestách (RAINWAT)
+          <div class="answer">- patří i Česká republika</div>
+        </div>
+        <div class="question">
+          Vnitrozemský automatický identifikační systém (Inland AIS)
+          <div class="answer">- je součástí říčních informačních služeb a může být používán na vyhrazených rádiových kmitočtech</div>
+        </div>
+        <div class="question">
+          AIS transpondér je rádiová stanice umožňující
+          <div class="answer">- příjem, vysílání a zpracování rádiového signálu automatického identifikačního systému</div>
+        </div>
+        <div class="question">
+          Maximální povolený výkon lodní radiostanice vysílající v pásmu VKV (VHF) je:
+          <div class="answer">- 25 W</div>
+        </div>
+        <div class="question">
+          Telekomunikační tajemství se týká
+          <div class="answer">- všech osob, které znají obsah rádiových zpráv nebo se dověděly o jejich existenci či o zprávě, která byla doručena prostřednictvím radiokomunikační služby.</div>
+        </div>
+        <div class="question">
+          Každý, kdo se dozví informace o skutečnostech, které jsou předmětem telekomunikačního tajemství,
+          <div class="answer">- je povinen zachovávat o nich mlčenlivost.</div>
+        </div>
+        <div class="question">
+          Předmětem telekomunikačního tajemství je zejména
+          <div class="answer">- obsah zpráv přepravovaných nebo jinak zprostředkovaných telekomunikačními zařízeními a sítěmi s výjimkou zpráv určených veřejnosti.</div>
+        </div>
+      </div>
+
+      <div class="questions-section">
+        <h2>b) Radiokomunikační provoz</h2>
+        <div class="question">
+          Oblast pokrytá signálem alespoň jedné pobřežní VKV (VHF) radiotelefonní stanice, která zabezpečuje nepřetržitou pohotovost pro tísňová volání DSC v systému GMDSS, se označuje jako
+          <div class="answer">- námořní oblast A1</div>
+        </div>
+        <div class="question">
+          RCC (Rescue Coordination Centre) je
+          <div class="answer">- orgán zodpovědný za účinnou organizaci pátracích a záchranných služeb (SAR) a za koordinaci SAR zásahů v dané oblasti</div>
+        </div>
+        <div class="question">
+          Zkratka DSC znamená
+          <div class="answer">- Digital Selective Calling (digitální selektivní volání), tj. volání prostřednictvím digitálního přenosu signálu a s možností výběru volané stanice nebo stanic</div>
+        </div>
+        <div class="question">
+          Jsou pro DSC určeny speciální kmitočty?
+          <div class="answer">- pro DSC je pásmu VKV (VHF) vyhrazen kanál č. 70, na němž je možné komunikovat pouze v rámci standardu DSC, fonický provoz je zablokován</div>
+        </div>
+        <div class="question">
+          K označení identity lodní stanice v rámci DSC provozu se používá
+          <div class="answer">- devítimístný číselný kód MMSI (Maritime Mobile Service Identity)</div>
+        </div>
+        <div class="question">
+          Dá se z MMSI lodní stanice poznat pod jakou vlajkou pluje?
+          <div class="answer">- ano, první tři číslice (MID) kódu lodní stanice označují stát, v němž je plavidlo registrováno</div>
+        </div>
+        <div class="question">
+          Podle čeho je možné identifikovat MMSI náležející pobřežní stanici?
+          <div class="answer">- pobřežní stanice používají devítimístný MMSI kód, v němž se před MID předřadí dvě nuly</div>
+        </div>
+        <div class="question">
+          Je možné se pomocí DSC spojit s definovanou skupinou lodních stanic?
+          <div class="answer">- DSC protokol umožňuje vyslat zprávu skupině lodních stanic na podkladě použití přiděleného skupinového MMSI</div>
+        </div>
+        <div class="question">
+          MID České republiky je
+          <div class="answer">- 270</div>
+        </div>
+        <div class="question">
+          Pro volání skupiny lodních stanic se u MMSI před MID předřazuje
+          <div class="answer">- jedna nula</div>
+        </div>
+        <div class="question">
+          Funkčnost VKV (VHF) zařízení DSC se ověřuje
+          <div class="answer">- pouze pomocí nabídky "SELF TEST" jednou za den, "živé" testování na kanálu 70 s jinou stanicí je zakázáno.</div>
+        </div>
+        <div class="question">
+          Jak probíhá potvrzení běžného (rutinního) pomocí DSC?
+          <div class="answer">- je nutné potvrdit nabídku spojení včetně čísla pracovního kanálu. Po odeslání potvrzení je další komunikace automaticky přepojena na vybraný pracovní kanál.</div>
+        </div>
+        <div class="question">
+          Aktivace tlačítka "DISTRESS" (aktivace DSC volání)
+          <div class="answer">- stlačením tlačítka nepřetržitě po dobu několika sekund, dokud nedojde k odeslání DSC zprávy. Tlačítko je výrazně odlišeno a umístěno pod krytem</div>
+        </div>
+        <div class="question">
+          Obsah tísňového volání DSC je následující:
+          <div class="answer">- identifikační údaj (MMSI), poziční informace, čas UTC a případně povaha tísně</div>
+        </div>
+        <div class="question">
+          Přednastavený obsah tísňového volání DSC se vysílá
+          <div class="answer">- v situaci, kdy není čas na ruční vkládání dalších doplňujících údajů</div>
+        </div>
+        <div class="question">
+          Způsob vkládání údajů o poloze do tísňového volání DSC
+          <div class="answer">- automaticky přes GNSS nebo ručně dle manuálu</div>
+        </div>
+        <div class="question">
+          Postup pro nastavení obsahu vysílání tísňového volání DSC
+          <div class="answer">- v MENU zvolit DISTRESS, zadat polohu a UTC, případně povahu tísně, odeslat</div>
+        </div>
+        <div class="question">
+          Opakování tísňového volání DSC
+          <div class="answer">- stanice opakuje každé 4 minuty do potvrzení nebo zrušení</div>
+        </div>
+        <div class="question">
+          Proč má příjem tísňového volání DSC přednostně potvrdit pobřežní stanice?
+          <div class="answer">- má nejlepší podmínky pro organizaci záchrany a může aktivovat další pomoc</div>
+        </div>
+        <div class="question">
+          Účel volání DISTRESS ALERT RELAY pobřežní stanicí
+          <div class="answer">- informovat lodě v oblasti o tísňové události a ověřit jejich možnosti pomoci</div>
+        </div>
+        <div class="question">
+          Jakou adresu použije DSC zpráva ALL SHIPS?
+          <div class="answer">- žádnou, adresa není potřeba</div>
+        </div>
+        <div class="question">
+          Jakou adresu použije DSC zpráva pro INDIVIDUAL STATION?
+          <div class="answer">- použije se MMSI této stanice</div>
+        </div>
+        <div class="question">
+          Potvrzení volání RELAY všemi loděmi
+          <div class="answer">- radiotelefonním provozem na kanálu 16</div>
+        </div>
+        <div class="question">
+          Pilnostní zprávy a DSC
+          <div class="answer">- ohlášení pilnostním voláním na kanálu 70 s uvedením pracovního kanálu</div>
+        </div>
+        <div class="question">
+          Potvrzení příjmu pilnostního volání
+          <div class="answer">- nepotvrzuje se, lodě přeladí na daný kanál</div>
+        </div>
+        <div class="question">
+          Bezpečnostní zprávy a DSC
+          <div class="answer">- ohlášení na kanálu 70 a uvedení pracovního kanálu</div>
+        </div>
+        <div class="question">
+          Potvrzení příjmu bezpečnostních volání
+          <div class="answer">- nepotvrzuje se, stanice se přeladí</div>
+        </div>
+        <div class="question">
+          EPIRB s frekvencí 406 MHz systému COSPAS-SARSAT je určen pro
+          <div class="answer">- všechny oblasti A1–A4</div>
+        </div>
+        <div class="question">
+          Oficiální EPIRB v GMDSS
+          <div class="answer">- 406 MHz, s GPS, s 121,5 MHz lokalizačním signálem</div>
+        </div>
+        <div class="question">
+          Jak se aktivuje EPIRB?
+          <div class="answer">- manuálně nebo automaticky hydrostatickým spínačem</div>
+        </div>
+        <div class="question">
+          Co jsou NON-SOLAS lodě?
+          <div class="answer">- plavidla mimo úmluvu SOLAS (malé lodě, rekreační)</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: A - Alpha E - Echo I - India
+          <div class="answer">- A - Alpha E - Echo I - India</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: B - Bravo F - Foxtrott J - Juliett
+          <div class="answer">- B - Bravo F - Foxtrott J - Juliett</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: C - Charlie G - Golf K - Kilo
+          <div class="answer">- C - Charlie G - Golf K - Kilo</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: D - Delta H - Hotel L - Lima
+          <div class="answer">- D - Delta H - Hotel L - Lima</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: M - Mike Q - Quebec U - Uniform
+          <div class="answer">- M - Mike Q - Quebec U - Uniform</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: N - November R - Romeo V - Victor
+          <div class="answer">- N - November R - Romeo V - Victor</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: O - Oscar S - Sierra W - Whisky
+          <div class="answer">- O - Oscar S - Sierra W - Whisky</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: P - Papa T - Tango X - X-ray
+          <div class="answer">- P - Papa T - Tango X - X-ray</div>
+        </div>
+        <div class="question">
+          Hláskovací abeceda: Y - Yankee Z - Zulu
+          <div class="answer">- Y - Yankee Z - Zulu</div>
+        </div>
+        <div class="question">
+          Zavináč @ v hláskování
+          <div class="answer">- AT</div>
+        </div>
+        <div class="question">
+          PTT tlačítko umožňuje
+          <div class="answer">- vysílání řeči</div>
+        </div>
+        <div class="question">
+          Zkratka pro Mezinárodní námořní organizaci
+          <div class="answer">- IMO</div>
+        </div>
+        <div class="question">
+          Zkratka pro úmluvu o bezpečnosti života na moři
+          <div class="answer">- SOLAS</div>
+        </div>
+        <div class="question">
+          Zkratka pro odpovídač SAR
+          <div class="answer">- SART</div>
+        </div>
+        <div class="question">
+          Zkratka pro koordinovaný světový čas
+          <div class="answer">- UTC</div>
+        </div>
+        <div class="question">
+          Výraz pro opravu ve vysílání
+          <div class="answer">- CORRECTION</div>
+        </div>
+        <div class="question">
+          I SPELL znamená
+          <div class="answer">- budu hláskovat</div>
+        </div>
+        <div class="question">
+          SAY AGAIN znamená
+          <div class="answer">- opakujte</div>
+        </div>
+        <div class="question">
+          I REPEAT znamená
+          <div class="answer">- zdůraznění důležité části zprávy</div>
+        </div>
+        <div class="question">
+          Požadavek na kontrolu signálu
+          <div class="answer">- RADIO CHECK</div>
+        </div>
+        <div class="question">
+          Identifikační číslo námořní pohyblivé služby
+          <div class="answer">- MMSI</div>
+        </div>
+        <div class="question">
+          Rádiová bóje označující místo katastrofy
+          <div class="answer">- EPIRB</div>
+        </div>
+        <div class="question">
+          RIJEKA RADIO znamená
+          <div class="answer">- volací značka pobřežní stanice RIJEKA</div>
+        </div>
+        <div class="question">
+          CALLSIGN znamená
+          <div class="answer">- volací značka</div>
+        </div>
+        <div class="question">
+          ROGER znamená
+          <div class="answer">- rozumím</div>
+        </div>
+        <div class="question">
+          LATITUDE znamená
+          <div class="answer">- zeměpisná šířka</div>
+        </div>
+        <div class="question">
+          LONGITUDE znamená
+          <div class="answer">- zeměpisná délka</div>
+        </div>
+        <div class="question">
+          DEGREE znamená
+          <div class="answer">- stupeň</div>
+        </div>
+        <div class="question">
+          NAVTEX zprávy na 518 kHz jsou v jazyce
+          <div class="answer">- anglickém</div>
+        </div>
+        <div class="question">
+          Dosah NAVTEX stanice na 518 kHz
+          <div class="answer">- 200–400 NM</div>
+        </div>
+        <div class="question">
+          Přesnost EPIRB 406 MHz bez GNSS
+          <div class="answer">- cca 5 km</div>
+        </div>
+        <div class="question">
+          EPIRB 406 MHz se aktivuje
+          <div class="answer">- manuálně nebo automaticky hydrostatickou pojistkou</div>
+        </div>
+        <div class="question">
+          SART 9 GHz slouží k
+          <div class="answer">- lokalizaci trosečníků</div>
+        </div>
+        <div class="question">
+          Zvětšení dosahu SART
+          <div class="answer">- umístit co nejvýše ve vertikální poloze</div>
+        </div>
+        <div class="question">
+          Zrušení omylem vyslaného volání z EPIRBu
+          <div class="answer">- hlasová zpráva na kanálu 16: Please cancel my distress alert of (time UTC)</div>
+        </div>
+        <div class="question">
+          Průkaz SRC opravňuje k obsluze zařízení pro
+          <div class="answer">- pouze VKV (VHF)</div>
+        </div>
+        <div class="question">
+          SEELONCE MAYDAY znamená
+          <div class="answer">- rádiový klid</div>
+        </div>
+        <div class="question">
+          SEELINCE FINI znamená
+          <div class="answer">- ukončení rádiového klidu</div>
+        </div>
+      </div>
+
+      <div class="questions-section">
+        <h2>c) Elektrotechnika a radiotechnika</h2>
+        <div class="question">
+          Paralelně řazené akumulátory
+          <div class="answer">- umožňují dodávat větší proud</div>
+        </div>
+        <div class="question">
+          Sériově řazené akumulátory
+          <div class="answer">- se zapojují pro zvýšení dodávaného napětí</div>
+        </div>
+        <div class="question">
+          Jmenovité napětí článku olověného akumulátoru je
+          <div class="answer">- 2 V</div>
+        </div>
+        <div class="question">
+          Jmenovité napětí článku alkalického akumulátoru je
+          <div class="answer">- 1,2 V</div>
+        </div>
+        <div class="question">
+          Jmenovité napětí suchého galvanického článku je
+          <div class="answer">- 1,5 V</div>
+        </div>
+        <div class="question">
+          Suché galvanické články
+          <div class="answer">- nelze dobíjet</div>
+        </div>
+        <div class="question">
+          Antény dělíme podle směru vysílání nebo příjmu na
+          <div class="answer">- směrové a všesměrové</div>
+        </div>
+        <div class="question">
+          Všesměrová anténa má vyzařovací charakteristiku
+          <div class="answer">- kruhovou</div>
+        </div>
+        <div class="question">
+          Všesměrová anténa musí přijímat nebo vysílat stejně všemi směry
+          <div class="answer">- v horizontální rovině</div>
+        </div>
+        <div class="question">
+          Půlvlnný dipól
+          <div class="answer">- může být směrová i všesměrová anténa, záleží na jeho orientaci k zemskému povrchu</div>
+        </div>
+        <div class="question">
+          Půlvlnný dipól umístěný rovnoběžně se zemským povrchem
+          <div class="answer">- má v horizontální rovině osmičkovou vyzařovací charakteristiku</div>
+        </div>
+        <div class="question">
+          Vztah mezi délkou vlny (λ) a kmitočtem (f), když c je rychlost světla, je
+          <div class="answer">- f = c / λ</div>
+        </div>
+        <div class="question">
+          Ampérmetr a voltmetr se při měření zařazují
+          <div class="answer">- ampérmetr do série se spotřebičem, voltmetr paralelně ke spotřebiči</div>
+        </div>
+        <div class="question">
+          V suchém, bezprašném prostředí ... považujeme za bezpečná napětí
+          <div class="answer">- stejnosměrné do 60 V a střídavé do 25 V</div>
+        </div>
+        <div class="question">
+          Při úrazu elektrickým proudem
+          <div class="answer">- vyprostíme postiženého..., zavoláme záchrannou službu...</div>
+        </div>
+        <div class="question">
+          Funkce "SQUELCH" VKV (VHF) radiostanice je určena
+          <div class="answer">- k potlačení slabších rušivých signálů včetně vlastního šumu přijímače.</div>
+        </div>
+        <div class="question">
+          Údaj elektrické napětí 2 V lze také zapsat
+          <div class="answer">- 2000 mV</div>
+        </div>
+        <div class="question">
+          Kmitočet 406 MHz lze také zapsat
+          <div class="answer">- 0,406 GHz</div>
+        </div>
+        <div class="question">
+          Délka rádiové vlny v pásmu 160 MHz (VKV/VHF) je
+          <div class="answer">- cca. 2 m</div>
+        </div>
+        <div class="question">
+          Vztah mezi napětím (U), proudem (I) a odporem (R) je:
+          <div class="answer">- U = R*I</div>
+        </div>
+        <div class="question">
+          Vztah mezi výkonem (P), napětím (U) a proudem (I) je:
+          <div class="answer">- P = U*I</div>
+        </div>
+        <div class="question">
+          Radiostanice odebírající z baterie 12 V proud 500 mA má příkon
+          <div class="answer">- 6 W</div>
+        </div>
+        <div class="question">
+          Tři dobré vodiče elektřiny jsou
+          <div class="answer">- měď, zlato, stříbro</div>
+        </div>
+        <div class="question">
+          Čtyři dobré izolanty jsou
+          <div class="answer">- sklo, vzduch, plast, porcelán</div>
+        </div>
+        <div class="question">
+          Ke zdroji 10 V jsou připojeny dva odpory 10 Ω zapojené do série. Odebíraný příkon činí:
+          <div class="answer">- 5 W</div>
+        </div>
+        <div class="question">
+          Radiotechnická součástka je identifikována jako kondenzátor, pokud se její hodnota měří v
+          <div class="answer">- pF</div>
+        </div>
+        <div class="question">
+          Výstupním výkonem stanice se rozumí
+          <div class="answer">- výkon koncového stupně vysílače dodávaný do napaječe anténního systému</div>
+        </div>
+        <div class="question">
+          Jaký je přibližně dosah mezi dvěma plachetnicemi...
+          <div class="answer">- asi 16 až 24 NM</div>
+        </div>
+        <div class="question">
+          Co umožňuje na radiostanici funkce DUAL WATCH?
+          <div class="answer">- souběžně monitorovat kanál 16 plus jeden další vybraný kanál</div>
+        </div>
+        <div class="question">
+          Je možné vysílat bez antény?
+          <div class="answer">- ne, hrozí poškození radiostanice</div>
+        </div>
+        <div class="question">
+          Kterou vlastnost antény ovlivní náklon lodě?
+          <div class="answer">- dosah</div>
+        </div>
+        <div class="question">
+          Co NENÍ možné dělat, když máme stisknuté tlačítko pro vysílání (PTT)?
+          <div class="answer">- přijímat jiné vysílání</div>
+        </div>
+        <div class="question">
+          V jakých typech DSC volání je zahrnutá pozice a čas?
+          <div class="answer">- pouze v tísňovém DSC alarmu (DISTRESS)</div>
+        </div>
+        <div class="question">
+          Jaká je minimální životnost baterie v radiobóji EPIRB při vysílání?
+          <div class="answer">- 48 hodin</div>
+        </div>
+        <div class="question">
+          Co z uvedeného NENÍ součástí radiobóje EPIRB?
+          <div class="answer">- mikrofon</div>
+        </div>
+        <div class="question">
+          K čemu je v pásmu VHF určený kanál 70?
+          <div class="answer">- slouží výhradně pro spojení mezi DSC kontroléry, hlasové volání je zakázáno</div>
+        </div>
+        <div class="question">
+          V jakém kmitočtovém pásmu pracuje lodní VHF radiostanice?
+          <div class="answer">- 156–162 MHz</div>
+        </div>
+        <div class="question">
+          Jakým způsobem se šíří rádiové vlny v pásmu VHF (VKV)?
+          <div class="answer">- šíří se přímočaře, neohýbají se podél zemského povrchu ani přes překážky</div>
+        </div>
+        <div class="question">
+          Na čem závisí délka antény v pásmu VHF?
+          <div class="answer">- na vlnové délce</div>
+        </div>
+        <div class="question">
+          Jak zvýšíme dosah antény v pásmu VHF (VKV)?
+          <div class="answer">- umístíme anténu co nejvýše</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="menu-button">
+      <i class="fas fa-home"></i>
+      Zpět do menu
+    </a>
+  </main>
+</body>
+</html> 
