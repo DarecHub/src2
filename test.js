@@ -62,7 +62,7 @@ const questionsData = {
             question: "Rádiovým spektrem se rozumí elektromagnetické vlny o kmitočtu (frekvenci)",
             answers: [
                 "vyšším než 3 000 GHz",
-                "nižším než 30 GHz",
+                "nižším než 3 000 GHz",
                 "nižším než 300 GHz"
             ],
             correct_answer: 1
