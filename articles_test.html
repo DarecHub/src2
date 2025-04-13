@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRC - Články</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .articles-container {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .article-section {
+      margin-bottom: 2rem;
+    }
+
+    .article-section h2 {
+      color: #001f3f;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #001f3f;
+    }
+
+    .article-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .article-item {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #f0f2f5;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .article-item:hover {
+      background-color: #e9ecef;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .article-number {
+      color: #001f3f;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    .article-text {
+      line-height: 1.5;
+    }
+
+    .translation {
+      display: none;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #dee2e6;
+      color: #495057;
+      font-style: italic;
+    }
+
+    .article-item.active {
+      background-color: #e9ecef;
+    }
+
+    .article-item.active .translation {
+      display: block;
+    }
+
+    .menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: #001f3f;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      margin: 2rem auto;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .menu-button:hover {
+      background-color: #003366;
+      transform: translateY(-2px);
+    }
+
+    @media screen and (max-width: 768px) {
+      .articles-container {
+        margin: 0.5rem;
+        padding: 1.5rem;
+      }
+
+      .article-section h2 {
+        font-size: 1.2rem;
+      }
+
+      .article-item {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <i class="fas fa-broadcast-tower"></i>
+        <span>SRC</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Zpět do menu</a></li>
+      </ul>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="articles-container">
+      <div class="article-section">
+        <h2>Články ke zkoušce</h2>
+        <ul class="article-list">
+          <li class="article-item">
+            <span class="article-number">1.</span>
+            <span class="article-text">Administrations shall ensure that the personnel of ship stations are adequately qualified to operate the stations efficiently mainly in cases of distress and safety communications in accordance with the relevant international agreements.</span>
+            <div class="translation">Správy musí zajistit, že personál lodních stanic je dostatečně kvalifikovaný k efektivnímu provozu stanic, zejména v případech tísňových a bezpečnostních komunikací, v souladu s příslušnými mezinárodními dohodami.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">2.</span>
+            <span class="article-text">No provisions of these Regulations prevent the use by a mobile station in distress of any means at its disposal to attract attention, make known its position, and obtain help.</span>
+            <div class="translation">Žádné ustanovení těchto předpisů nebrání mobilní stanici v tísni použít jakékoli prostředky, které má k dispozici, aby přivolala pozornost, oznámila svou polohu a získala pomoc.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">3.</span>
+            <span class="article-text">All stations which receive a distress alert transmitted by digital selective calling shall immediately cease any transmission capable of interfering with distress traffic and shall continue watch until the call has been acknowledged.</span>
+            <div class="translation">Všechny stanice, které přijmou tísňové volání vyslané digitálním selektivním voláním, musí okamžitě přestat vysílat jakékoli signály, které by mohly rušit tísňový provoz, a pokračovat ve sledování, dokud nebude volání potvrzeno.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">4.</span>
+            <span class="article-text">In vicinity of buoy Humber 5, observed capsized lifeboat, no survivors are to be seen. Ships in area are requested to keep sharp lookout and report to Solent Coast Guard.</span>
+            <div class="translation">V blízkosti bóje Humber 5 byl pozorován převrácený záchranný člun, nejsou vidět žádní přeživší. Lodě v oblasti jsou vyzvány, aby bedlivě sledovaly okolí a podaly zprávu pobřežní stráži Solent.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">5.</span>
+            <span class="article-text">In position 61°10.6' N 003°45.3 E after explosion fire in engine room, 2 persons are seriously injured, we have to abandon the vessel, require immediate assistance.</span>
+            <div class="translation">Na pozici 61°10.6' N 003°45.3' E došlo po výbuchu k požáru ve strojovně, 2 osoby jsou vážně zraněné, musíme opustit plavidlo, požadujeme okamžitou pomoc.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">6.</span>
+            <span class="article-text">On motor vessel Freya person over board last seen at 0730 UTC in position 2 nm north of racon buoy Elbe. All ships in vicinity please keep sharp lookout and report to Bremen Rescue.</span>
+            <div class="translation">Na motorové lodi Freya muž přes palubu, naposledy spatřen v 07:30 UTC na pozici 2 námořní míle severně od bóje Elbe. Všechny lodě v okolí, prosím, pečlivě sledujte okolí a kontaktujte záchranu v Brémách.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">7.</span>
+            <span class="article-text">Mayday voice call reported in position west from Cabo San Vito lighthouse at zero five three two local time, no further communication heard. All ships in the area are requested to keep a sharp lookout and report any incident immediately to Palermo Coastguard.</span>
+            <div class="translation">Hlášení Mayday hlasem v pozici západně od majáku Cabo San Vito v 05:32 místního času, další komunikace nebyla slyšena. Všechny lodě v oblasti jsou žádány, aby pozorně sledovaly okolí a neprodleně hlásily jakýkoli incident pobřežní stráži v Palermu.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">8.</span>
+            <span class="article-text">In position 3 nm east off Aigina island, broken rudder, drifting ashore in rough sea. Require immediate assistance.</span>
+            <div class="translation">Na pozici 3 námořní míle východně od ostrova Aigina, zlomené kormidlo, plavidlo je unášeno na pobřeží v rozbouřeném moři. Požadujeme okamžitou pomoc.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">9.</span>
+            <span class="article-text">Person over board at 2110 LT in position 2 nm west of Unije, ships in vicinity please keep good lookout and assist with search and rescue and report to Rijeka Rescue.</span>
+            <div class="translation">Muž přes palubu ve 21:10 LT na pozici 2 námořní míle západně od Unije, lodě v okolí prosím sledujte okolí a pomozte s pátráním a záchranou, hlaste se záchrannému středisku v Rijece.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">10.</span>
+            <span class="article-text">Sécurité Sécurité Sécurité, All ships, All ships, All ships, This is motor yacht Andromeda. Our position is east from Splitska Vrata, one decimal five mile. We have broken engines, the boat is not under command, slowly drifting to the west. No assistance required.</span>
+            <div class="translation">Sécurité Sécurité Sécurité, všem lodím, zde motorová jachta Andromeda. Naše pozice je východně od Splitska Vrata, 1,5 míle. Máme poruchu motoru, plavidlo není pod kontrolou, pomalu driftuje na západ. Pomoc není vyžadována.</div>
+          </li>
+          <li class="article-item">
+            <span class="article-number">11.</span>
+            <span class="article-text">Observed small unknown aircraft with two propellers in position 58°55.8' N 002°24.3' E, aircraft is still afloat, ships in vicinity please try to contact aircraft on VHF Ch 16 and report to Stavanger Rescue.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">12.</span>
+            <span class="article-text">Our position 55°16.9' N 016°23.1' E. Observed red rockets in true bearing of about 045°, estimated distance 8 nm. All ships in area please keep sharp look-out and report to Gothenburg Coastguard.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">13.</span>
+            <span class="article-text">Gale warning for Skagerrak and Kattegat, W 8 to 9, decreasing to 7, rough sea, showers, good to moderate visibility.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">14.</span>
+            <span class="article-text">New gale warning issued at 1430. South easterly severe gale force 9 expected soon in southern Adriatic. For latest weather forecast and navigational warnings listen to channel 23. Dubrovnik Radio out.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">15.</span>
+            <span class="article-text">At 0732 UTC on VHF channel 16 following received: "Mayday, Aida, call sign LGBX, in position 4 nm northwest of Heligoland, explosions in engine room, 6 persons are injured, require helicopter and medical assistance." End of message.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">16.</span>
+            <span class="article-text">At 1525 UTC on VHF Ch 16 following received from motor vessel Blue Sky, 5KMO: "Person over board in position 12 nm north-west of Calais, vessels in vicinity please keep sharp lookout." End of message. Ships in area are requested to assist with search and rescue and report to Falmouth Coastguard.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">17.</span>
+            <span class="article-text">Mayday Relay, Mayday Relay, Mayday Relay, All stations, All stations, All stations, This is Moby Dick, Moby Dick, Oscar Lima zero three eight nine. Mayday received from unknown sailing yacht aground on the rocks south from Palagruža island. Require immediate assistance. There seem to be two people on board. Using red hand flares. No radio communication established. Over.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">18.</span>
+            <span class="article-text">Due to steering problems vessel is not under command in position 51°10.4'N 003°45.6'E, require assistance with towing.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">19.</span>
+            <span class="article-text">In position 12 nm south from Cape Spartivento, a crew member is fallen from the mast and seriously injured, course 275° speed 7 knots, require urgent medical assistance.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">20.</span>
+            <span class="article-text">Sailing yacht Hadrian, call sign DD2663, in collision with fishing vessel Wangerburg, in position 7 nm W from Komiza, dangerous leak, vessel sinking after flooding, require immediate assistance.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">21.</span>
+            <span class="article-text">Sailing boat Rubin, 12m red hull, white sails, 2 persons on board, left Klintholm on July 16th at 0600 local time, bound for Visby, ship has not yet arrived, shipping are requested to keep sharp look-out and report to Lyngby Radio.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">22.</span>
+            <span class="article-text">Mayday, Perseus, this is Alfa Lifeboat. For direction finding purposes please hold your "press to transmit" switch closed for two periods of ten seconds each, followed by your vessel name repeated four times on this frequency. Over.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">23.</span>
+            <span class="article-text">Small craft are required to call Dover Port Control on Ch 74 for permission to enter. Request permission to leave harbour as soon as clear of the marina. Call Dover Marina Ch 80, only when in marina.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">24.</span>
+            <span class="article-text">In position 55°12.4'N 005°08.7' E, a crew member 56 years old unconscious, suspect heart attack, require urgent medical help by helicopter.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">25.</span>
+            <span class="article-text">In position 55°23.4'N 006°18.1'E, engine broken under command, immediate assistance. Motor yacht is uncontrolled and in very rough sea and extremely high position.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">26.</span>
+            <span class="article-text">Sailing yacht Relaxe, call sign WLUJ, length 40 feet, white hull and brown sails, underway from Martinique to Bahamas unreported since January 16th, all ships please keep sharp lookout and report to US Coast Guard.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">27.</span>
+            <span class="article-text">All small crafts in the Solent are strongly advised to monitor VHF Ch 12 Southampton and/or Ch 11 Portsmouth for information on shipping movement and port operations.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">28.</span>
+            <span class="article-text">Require medical advice for man fallen from the mast, seriously injured with heavy loss of blood, position 54°48.1'N 006°55.7'E, ships with doctor please contact VHF Ch 16.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">29.</span>
+            <span class="article-text">Sailing yacht Tinker, DP2932, in position 37°43.3'N 23°40.6'E, broken mast, damaged rudder, vessel is not under command in rough sea, require immediate assistance.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">30.</span>
+            <span class="article-text">Humber-Elbe-Route in position 53° 25.7' N 005° 28.4' E observed nearly submerged drifting yellow coloured buoy, dangerous to navigation.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">31.</span>
+            <span class="article-text">Gale warning issued at 0935 UTC for Sea area Dogger Bank to Isle of Wight: strong westerly winds increasing to gale force 8 to 9, veering later, drizzle at times, visibility moderate, occasionally poor.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">32.</span>
+            <span class="article-text">On approach to Dunkerque, dangerous wreck located in position 51°04.6'N 001°52.2'E, vessels are requested to keep a wide berth.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">33.</span>
+            <span class="article-text">Navigational warning number 0418, Central Adriatic, Zirje island – works on navigation mark in position 43°39.7'N 015°33.16'E, marked with lighted buoy, characteristic: flashing white 2 seconds, visibility 2 miles. Navigation, stopping, fishing and underwater works in radius 100 meters prohibited.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">34.</span>
+            <span class="article-text">Ice warning. Icebergs are reported in area around Belle Isle and Cape Freels. Ice situation is not expected to change in the next 24 hours.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">35.</span>
+            <span class="article-text">In position 4 nm Northwest of Cape Finisterre sighted several drifting containers, red coloured, one container marked with TEXASCON, ships in area are requested to navigate carefully.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">36.</span>
+            <span class="article-text">Dangerous uncharted underwater obstruction reported in position 53° 48.3' N 007° 41.7' E marked by yellow buoy with west top mark. Vessels requested to keep a wide berth.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">37.</span>
+            <span class="article-text">Motor vessel Haminco lost anchor and chain in position 51° 25.8' N 002° 40.5' E; shipping in this area is requested to use neither an anchor nor mooring gear.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">38.</span>
+            <span class="article-text">Area Humber, Thames, Dover, Isle of Wight and Belgian Coast NEly gale imminent force 3 to 4, moderate or poor visibility, mainly fair.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">39.</span>
+            <span class="article-text">Fairway between Den Helder and Den Oever light buoy MG18 is reported unlit, shipping in this area is requested to navigate with caution.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">40.</span>
+            <span class="article-text">Weather forecast for the area North of Portugal, rain or showers, at times SW 6, temporarily increasing W 8 veering to NW 5 later.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">41.</span>
+            <span class="article-text">Military operations between Aigina, Salamina and Flevolpoula in progress until February 16th, all ships are requested to navigate with caution and maintain listening watch on Ch16.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">42.</span>
+            <span class="article-text">Navigational warning number two, issued on 12 March 0600 UTC: construction works in Split harbour, near eastern breakwater and southern side of ferry port. Ships approaching and leaving Split harbour are advised to proceed with caution.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">43.</span>
+            <span class="article-text">Western approaches to English Channel. Underwater operations in progress, vicinity of line joining 48° 00' N 007° 15' W and 48° 51' N 007° 12' W. Ships are requested to keep a wide berth.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">44.</span>
+            <span class="article-text">Safety and rescue services: The SAR co-ordinating center is in Piraeus. Olympia Radio monitor DSC, VHF, MF and HF frequencies including 2182kHz and VHF Ch 16. All safety and security radio traffic should call Olympia Radio.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">45.</span>
+            <span class="article-text">Warning: Gusts of south easterly winds 35-55 knots, in places up to 70 knots, and in the Velebit channel and in the northern part of the North Adriatic often easterly, in the evening of south easterly winds, 35-55 knots. Sea 5, locally up to 6, mainly in the open. Isolated thunderstorms.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">46.</span>
+            <span class="article-text">Specific permission to enter/leave harbour via E or W entrance must be obtained from Port Control on Ch 74. Advise if you have no engine. Comply with any VHF instructions from Port Control or harbour patrol launch.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">47.</span>
+            <span class="article-text">Navigational warning issued by Olympia Radio on November 19 0500 UTC, valid until November 22 0500 UTC; major dredging operations and construction works north entrance of Lefkas channel on position 38°50′ N 20°43′ E. Vessels are requested to navigate with extreme caution.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">48.</span>
+            <span class="article-text">Miami Coast Guard has received a DSC distress alert from vessel Uranus. Reported position is 10°04′ N 077°14′ W. Shipping is requested to keep a sharp lookout and report to Miami Coast Guard.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">49.</span>
+            <span class="article-text">Falmouth Coast Guard received following information from fishing vessel Parrain, FHEF. The message begins: "Mayday all crew members on board the vessel have now been airlifted and are proceeding to Stornoway on rescue helicopter 137. The vessel is still adrift in position 59° 05′ N 013° 55′ W". End of message.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">50.</span>
+            <span class="article-text">Urgent broadcast. Belfast Coast Guard received report of a missing 38 feet sailing vessel "Windigo". She left Campbeltown with destination Stornoway on 20th January 0800 UT. The sailing vessel is red with white superstructure. Shipping is requested to keep a sharp lookout and report sightings to Belfast Coast Guard.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">51.</span>
+            <span class="article-text">Eastern Channel, Dover Strait: large floating pontoon reported adrift from Le Havre to the Belgian coast. Drifting north into the south North Sea. Shipping is requested to keep a sharp look-out and report any sighting to Oostende Coast Guard.</span>
+          </li>
+          <li class="article-item">
+            <span class="article-number">52.</span>
+            <span class="article-text">Navigational warning No.64 from 13 February 0915 UTC: German Bight traffic separation scheme, large piece of wood drifting in position 53°47.4′ N 006°11.1′ E. Navigational warning canceled 13 February at 1100 UTC.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <a href="index.html" class="menu-button">
+      <i class="fas fa-home"></i>
+      Zpět do menu
+    </a>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const articles = document.querySelectorAll('.article-item');
+      
+      articles.forEach(article => {
+        article.addEventListener('click', function() {
+          // Toggle active class
+          this.classList.toggle('active');
+          
+          // Close other articles
+          articles.forEach(otherArticle => {
+            if (otherArticle !== this) {
+              otherArticle.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html> 
